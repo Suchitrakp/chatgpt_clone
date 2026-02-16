@@ -10,7 +10,7 @@ pipeline{
         stage( 'Checkout' ){
             steps {
                 git branch: 'main',
-                url: 'https://github.com/ytmicrodegreeprojects/chatgpt_clone.git'
+                url: 'https://github.com/Suchitrakp/chatgpt_clone.git'
             }
         }
 
