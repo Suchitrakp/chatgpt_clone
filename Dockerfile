@@ -4,15 +4,9 @@ WORKDIR /app
 
 COPY package*.json ./
 
-# Install dependencies including correct SWC binary
-RUN npm install
-
-# Force SWC binary installation
-RUN npm install @next/swc-linux-x64-gnu
+RUN npm ci --no-audit --no-fund
 
 COPY . .
-
-RUN npm run build
 
 EXPOSE 3000
 

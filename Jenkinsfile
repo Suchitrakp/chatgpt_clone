@@ -16,7 +16,8 @@ pipeline{
 
         stage( 'Build Docker Image' ) {
             steps {
-                sh 'docker build -t  chatgpt_clone .'
+                sh 'docker build --network=host -t chatgpt_clone .'
+
             }
         }
 
